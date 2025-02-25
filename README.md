@@ -53,6 +53,27 @@ poetry install
 ```
 This reads your pyproject.toml (and poetry.lock if present) and installs all required packages in an isolated virtual environment.
 
+### PyTorch Installation
+
+Since PyTorch has different versions depending on your hardware (CUDA vs. CPU-only), you should install it manually:
+
+If you have a GPU and want CUDA support:
+```bash
+poetry run pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu124
+```
+
+For CPU-only installation:
+```bash
+poetry run pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cpu
+```
+
+If you are unsure about your PyTorch installation, you can check it with:
+```bash
+python -c "import torch; print(torch.__version__); print(torch.cuda.is_available())"
+```
+
+### Additional Requirements
+
 Install FFmpeg (if not already):
 - Windows: Download from the official FFmpeg site and add to your system PATH.
 - macOS:
@@ -205,6 +226,10 @@ os.makedirs(transcription_output_dir, exist_ok=True)
 ### PyAnnote / Whisper Errors
 - Make sure your Hugging Face token is set for pyannote/speaker-diarization.
 - Whisper can require substantial GPU/CPU memory depending on the model chosen.
+
+### PyTorch / CUDA Issues
+- If you encounter CUDA-related errors, ensure you've installed the correct PyTorch version for your system.
+- For CUDA compatibility issues, try reinstalling PyTorch with the appropriate CUDA version.
 
 ### Permission Issues
 - Run the script with sufficient privileges if writing to restricted folders.
