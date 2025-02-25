@@ -3,7 +3,7 @@
   <h1>YouTube Audio Extractor and Transcriber</h1>
   <p>Enable AI to control your browser 🤖</p>
 
-  ![Stars](https://img.shields.io/github/stars/deduu/audio-transcription-processor?style=for-the-badge)
+  ![Stars](https://img.shields.io/github/stars/deduu/Youtube-audio-transcription?style=for-the-badge)
   ![Discord](https://img.shields.io/discord/1234567890?style=for-the-badge&label=Discord&color=5865F2)
   ![Documentation](https://img.shields.io/badge/Documentation-Complete-blue?style=for-the-badge)
   ![Cloud](https://img.shields.io/badge/Cloud-Ready-blue?style=for-the-badge)
@@ -43,8 +43,8 @@ This project includes a Streamlit web app (and/or Python scripts) that enable yo
 
 Clone the repository:
 ```bash
-git clone https://github.com/deduu/audio-transcription-processor
-cd audio-transcription-processor
+git clone https://github.com/deduu/Youtube-audio-transcription
+cd Youtube-audio-transcription
 ```
 
 Install dependencies using Poetry:
@@ -261,7 +261,7 @@ If you use this tool in your research or project, please cite it as:
 @software{Youtube_audio_transcription_processor2025,
   author = {Dedu, Author},
   title = {YouTube Audio Extractor and Transcriber},
-  url = {https://github.com/deduu/audio-transcription-processor},
+  url = {https://github.com/deduu/Youtube-audio-transcription},
   year = {2025},
   month = {February}
 }
