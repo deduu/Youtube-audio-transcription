@@ -105,7 +105,7 @@ If you're using the modular Streamlit approach (e.g., streamlit_app.py plus audi
    ```
 3. Run the app via Streamlit:
    ```bash
-   streamlit run streamlit_app.py
+   streamlit run main.py
    ```
 4. Open the URL in your browser (Streamlit will display the local URL, typically http://localhost:8501).
 

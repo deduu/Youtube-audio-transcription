@@ -165,6 +165,8 @@ cython_debug/
 
 test*.py
 
+app.py
+
 transcriptions/
 
 temp_audio/
