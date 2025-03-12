@@ -131,7 +131,8 @@ env.bak/
 venv.bak/
 extracted_audio/
 transcriptions/
-
+.streamlit/
+test_video/
 # Spyder project settings
 .spyderproject
 .spyproject
