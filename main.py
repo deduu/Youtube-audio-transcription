@@ -78,7 +78,9 @@ def display_transcription(transcriptions):
         st.markdown('<div class="output-container">', unsafe_allow_html=True)
 
         speakers = list(set(t["speaker"] for t in transcriptions))
-        colors = ["#FF9AA2", "#FFB7B2", "#FFDAC1", "#E2F0CB", "#B5EAD7", "#C7CEEA"]
+        # colors = ["#FF9AA2", "#FFB7B2", "#FFDAC1", "#E2F0CB", "#B5EAD7", "#C7CEEA"]
+        colors = ["#FF6B6B", "#4ECDC4", "#FFE66D", "#6A0572", "#2E86AB", "#FFB400"]
+
         speaker_colors = {speakers[i]: colors[i % len(colors)] for i in range(len(speakers))}
 
         for seg in transcriptions:
@@ -191,6 +193,8 @@ def transcribe_audio_source(
     st.session_state["transcriptions"] = transcriptions
     st.session_state["transcript_text"] = combine_transcriptions(transcriptions)
     st.session_state["llm_response"] = ""  # clear old LLM response
+
+    print(f"Transcriptions: {st.session_state['transcript_text']}")
 
 # ------------------ Main UI (Streamlit) ------------------
 
@@ -367,7 +371,7 @@ def main():
                 llm_response = answer_with_llm(
                     context=st.session_state["transcript_text"],
                     question=question_to_ask,
-                    model_name="openai:gpt-3.5-turbo",
+                    model_name="ollama:phi4:14b-fp16",
                     temperature=0.75
                 )
             # Store LLM answer so it persists
@@ -375,7 +379,7 @@ def main():
 
         # If we have an LLM response, display it
         if st.session_state["llm_response"]:
-            st.write("**LLM Answer:**")
+            st.write("**AI Agent response:**")
             st.write(st.session_state["llm_response"])
 
 if __name__ == "__main__":

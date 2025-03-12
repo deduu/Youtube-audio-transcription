@@ -26,15 +26,15 @@ def answer_with_llm(
 
     # The user message includes the context plus the question.
     user_prompt = f"""
-Context or conversation details:
-{context}
+    Context or conversation details:
+    {context}
 
-User Instruction / Question:
-{question}
+    User Instruction / Question:
+    {question}
 
-Please follow the user's instructions as best as you can, using the above context if relevant.
-If the question cannot be answered from the context, respond accordingly.
-"""
+    Please follow the user's instructions as best as you can, using the above context if relevant.
+    If the question cannot be answered from the context, respond accordingly.
+    """
 
     messages = [
         {"role": "system", "content": system_prompt},

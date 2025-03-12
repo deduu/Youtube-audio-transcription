@@ -37,6 +37,8 @@ pyannote-audio = "^3.3.2"
 einops = "^0.8.1"
 streamlit = "^1.42.2"
 vidavox = {git = "https://github.com/deduu/vidavox.git", rev = "migrate-to-poetry"}
+opencv-python = "^4.11.0.86"
+fpdf2 = "^2.8.2"
 
 
 [build-system]
