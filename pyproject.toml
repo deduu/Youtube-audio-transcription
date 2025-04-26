@@ -39,6 +39,8 @@ streamlit = "^1.42.2"
 vidavox = {git = "https://github.com/deduu/vidavox.git", rev = "migrate-to-poetry"}
 opencv-python = "^4.11.0.86"
 fpdf2 = "^2.8.2"
+fastapi = "^0.115.12"
+uvicorn = "^0.34.2"
 
 
 [build-system]

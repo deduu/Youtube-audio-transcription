@@ -2,6 +2,10 @@
 from dataclasses import dataclass
 from typing import List, Optional
 
+
+def get_whisper_models() -> List[str]:
+    return ["tiny", "base", "small", "medium", "large"]
+
 @dataclass
 class TimeRange:
     start_time: str
