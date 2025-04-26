@@ -15,8 +15,7 @@ def get_diarization_pipeline():
         return None
     try:
         pipeline = Pipeline.from_pretrained(
-            "pyannote/speaker-diarization-3.1",
-            use_auth_token=token
+            "pyannote/speaker-diarization-3.1", use_auth_token=token
         )
         return pipeline
     except Exception as e:
@@ -44,3 +43,5 @@ def run_diarization(audio_file: str):
     except Exception as e:
         st.error(f"Error during diarization: {str(e)}")
         return []
+
+

@@ -1,7 +1,6 @@
 <div align="center">
   <img src="https://raw.githubusercontent.com/deduu/audio-transcription-processor/main/assets/logo.png" alt="Project Logo" width="150">
   <h1>YouTube Audio Extractor and Transcriber</h1>
-  <p>Enable AI to control your browser 🤖</p>
 
   ![Stars](https://img.shields.io/github/stars/deduu/Youtube-audio-transcription?style=for-the-badge)
   ![Discord](https://img.shields.io/discord/1234567890?style=for-the-badge&label=Discord&color=5865F2)
